@@ -1,0 +1,78 @@
+.card {
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	width: 350px;
+	height: 600px;
+	padding: 15px;
+	margin-bottom: 15px;
+	border-radius: 15px;
+	box-shadow: 0px 1px 5px $violet;
+	transition: 0.3s;
+	.container-img {
+		height: 300px;
+		display: flex;
+		justify-content: center;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.container-txt {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		height: 270px;
+		::-webkit-scrollbar {
+			display: none;
+			overflow: auto;
+		}
+		h2 {
+			font-size: 20px;
+			padding: 10px 0;
+		}
+		.synopsis {
+			height: auto;
+			overflow-y: scroll;
+			font-size: 1rem;
+			line-height: 1.5;
+		}
+		.genre {
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+			li {
+				margin-right: 10px;
+				margin-bottom: 5px;
+				border-radius: 5px;
+				padding: 5px;
+				background-color: $violet;
+			}
+		}
+		h4 {
+			font-size: 16px;
+			padding: 5px 0;
+		}
+		.date {
+			font-size: 12px;
+			font-weight: 400;
+			color: rgb(181, 177, 177);
+		}
+	}
+	&:hover {
+		box-shadow: 0px 1px 15px $violet;
+	}
+}
+
+.heart {
+	position: absolute;
+	background-color: transparent;
+	border: none;
+	font-size: 25px;
+	top: 25px;
+	right: 30px;
+	cursor: pointer;
+}

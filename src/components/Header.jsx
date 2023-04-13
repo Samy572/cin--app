@@ -5,12 +5,12 @@ const Header = () => {
 		<header>
 			<ul>
 				<li>
-					<NavLink to="/">Accueil</NavLink>
+					<NavLink to="/" className={nav => nav.isActive ? "nav-active" : '' }>Accueil</NavLink>
 				</li>
 				<li>
-					<NavLink to="/favoris">Coup de coeur</NavLink>
+					<NavLink to="/favoris" className={nav => nav.isActive ? "nav-active" : '' }>Coup de coeur</NavLink>
 				</li>
-			</ul>{' '}
+			</ul>
 			<div className="title">
 				<h1>React Movies</h1>
 			</div>
